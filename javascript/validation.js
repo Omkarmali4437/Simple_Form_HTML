@@ -42,7 +42,7 @@ const pwd = document.querySelector('#pwd');
 const pwdError = document.querySelector('.pwd-error');
 
 pwd.addEventListener('input',function(){
-    let pwdregex = new RegExp(".{,8}");
+    let pwdregex = new RegExp("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=[^$@!#%*?&]*[$#@!%*?&][^$@!#%*?&]*$).{8,}");
 
     if(pwdregex.test(pwd.value)){
         pwdError.textContent = "";
